@@ -16,12 +16,14 @@ class UserSeeder extends Seeder
     {
         $user = new User();
         $user->name = 'Dara';
+        // $user->lastname = 'Alvarez';
         $user->email = 'Dara@alu.uabcs.mx';
         $user->password = 'password';
         $user->save();
 
         $user = new User();
         $user->name = 'Edgar';
+        // $user->lastname = 'Narvaez';
         $user->email = 'Edgar@alu.uabcs.mx';
         $user->password = 'password1';
         $user->save();

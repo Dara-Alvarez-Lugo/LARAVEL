@@ -17,8 +17,22 @@
         <label for="">Nombre</label>
         <input type="text" name="name">
 
+        <br><br>
+
+        <label for="">Apellido</label>
+        <input type="text" name="lastname">
+
+        <br><br>
+
         <label for="">Email</label>
         <input type="text" name="email">
+
+        <br><br>
+
+        <label for="">Password</label>
+        <input type="password" name="password">
+
+        <br><br>
 
         <button>Guardar</button>
         
