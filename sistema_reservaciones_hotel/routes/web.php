@@ -27,11 +27,20 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+
 // Usuario
-Route::get('/users', [UserController::class,'index']);
-Route::get('/users/create', [UserController::class,'create']);
-Route::get('/users/{id}', [UserController::class,'show']);
-Route::post('/users', [UserController::class,'store']);
+
+Route::middleware(['auth'])->group(function(){
+
+    // Usuario
+    Route::get('/users', [UserController::class,'index']);
+    Route::get('/users/create', [UserController::class,'create']);
+    Route::get('/users/{id}', [UserController::class,'show']);
+    Route::post('/users', [UserController::class,'store']);
+
+});
+
+
 
 // Cliente
 Route::get('/clients', [ClientController::class,'index']);

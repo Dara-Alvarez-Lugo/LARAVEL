@@ -17,7 +17,11 @@ class UserController extends Controller
         // echo "Hola pollito";
         // return User::all();
         // return User::get();
-        return User::select('name')->get();
+       // return User::select('name')->get();
+       $users = User::select('id','name')->get();
+      // $users = User::select('id','name')->get();
+
+       return view('users.index',compact('users'));
     }
 
     /**
@@ -55,7 +59,10 @@ class UserController extends Controller
     public function show($id)
     {
         // return User::where('id',$id)-get();
-        return User::find($id);
+        //return User::find($id);
+        
+        $user = User::find($id);
+        return view('users.update', compact('user'));
     }
 
     /**
